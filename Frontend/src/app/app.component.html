@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-card class="download-card">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Youtube Video Downloader</h1>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+     <p> Paste Your Youtube Video URL below and choose the format to download your vidoe or audio</p>
+
+     <mat-form-field class="full-width" appearance="outline" >
+
+      <mat-label>
+        Video URL
+      </mat-label>
+
+      <input type="text" matInput placeholder="Enter Your Video URL" [(ngModel)]="videoUrl">
+     </mat-form-field>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button class = "button" (click)="download()" mat-raised-button disabled="{{!videoUrl}}">
+        🚀 Download
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
